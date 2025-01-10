@@ -51,7 +51,6 @@ const MenusSliceService = createSlice({
             .addCase(fetchMenus.fulfilled, (state, action) => {
                 state.loading = false;
                 // Check if cuisineSlug is 'all'
-                console.log(action.payload);
                 if (action.payload.cuisineSlug === 'all') {
                     // Append the new menus if the cuisineSlug is 'all'
                     state.menus = [...state.menus, ...action.payload.data];
